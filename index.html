@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>RPG Proto-type</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/startgame.js"></script>
+	<script type="text/javascript" src="js/playerAnimation.js"></script>
+	<script type="text/javascript" src="js/renderTerrain.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/changeState.js"></script>
+	<script type="text/javascript" src="js/render.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		$(document).keypress(function (e) {
+			keyPressed = e.keyCode;
+		})
+		$(document).keyup(function () {
+			keyPressed = 0;
+		})
+	})
+	</script>
+</head>
+<body>
+<center>
+	<canvas id="gameCanvas" width="400" height="400">
+		Download the latest version of Google Chrome to play this game!
+	</canvas>
+	<p id="temp"></p>
+	<script type="text/javascript">
+		window.onload = startGame;
+	</script>
+	
+	Press W, A, S, D to move
+	
+	<p id="position"></p>
+</center>
+</body>
+</html>
